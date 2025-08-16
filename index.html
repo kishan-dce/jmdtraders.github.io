@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Maa Durga Traders - Complete Building Solutions in Saharsa, Bihar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gradient-bg-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .gradient-bg-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-tools text-2xl text-purple-600 mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">Jay Maa Durga Traders</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">About</a>
+                    <a href="#products" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Products</a>
+                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Services</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Reviews</a>
+                    <a href="#location" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Location</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-purple-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors font-medium py-2 px-4 rounded hover:bg-gray-100">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors font-medium py-2 px-4 rounded hover:bg-gray-100">About</a>
+                    <a href="#products" class="text-gray-700 hover:text-purple-600 transition-colors font-medium py-2 px-4 rounded hover:bg-gray-100">Products</a>
+                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition-colors font-medium py-2 px-4 rounded hover:bg-gray-100">Services</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-purple-600 transition-colors font-medium py-2 px-4 rounded hover:bg-gray-100">Reviews</a>
+                    <a href="#location" class="text-gray-700 hover:text-purple-600 transition-colors font-medium py-2 px-4 rounded hover:bg-gray-100">Location</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors font-medium py-2 px-4 rounded hover:bg-gray-100">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="text-center md:text-left mb-8 md:mb-0 fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                        <i class="fas fa-tools mr-3"></i>Jay Maa Durga Traders
+                    </h1>
+                    <p class="text-xl md:text-2xl opacity-90 mb-6">All essentials used in building a house are available in one place</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#products" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-shopping-cart mr-2"></i>View Products
+                        </a>
+                        <a href="tel:6202804476" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                            <i class="fas fa-phone mr-2"></i>Call Now
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
+                        <p class="font-semibold mb-3 text-lg">Owner: Pankaj Kumar Gupta</p>
+                        <div class="flex flex-col space-y-2">
+                            <a href="tel:6202804476" class="hover:text-yellow-300 transition-colors text-lg">
+                                <i class="fas fa-phone mr-2"></i>6202804476
+                            </a>
+                            <a href="tel:9934890059" class="hover:text-yellow-300 transition-colors text-lg">
+                                <i class="fas fa-phone mr-2"></i>9934890059
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="fade-in">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">15+</div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                    <div class="text-gray-600">Products Available</div>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl font-bold text-green-600 mb-2">1000+</div>
+                    <div class="text-gray-600">Happy Customers</div>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl font-bold text-red-600 mb-2">24/7</div>
+                    <div class="text-gray-600">Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Jay Maa Durga Traders</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Your trusted partner in building dreams since 2009</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Story</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Founded in 2009 by Pankaj Kumar Gupta, Jay Maa Durga Traders has been serving the Saharsa community for over 15 years. What started as a small hardware shop has grown into the region's most trusted one-stop destination for all building and construction needs.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Located strategically near Atalkha Chowk on the Atalkha-Patarghat Road, we have witnessed and contributed to the growth and development of countless homes, businesses, and infrastructure projects in Bihar.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our commitment to quality, competitive pricing, and exceptional customer service has made us the preferred choice for contractors, builders, and homeowners throughout the region.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-purple-100 px-4 py-2 rounded-full">
+                            <span class="text-purple-800 font-semibold">Quality Assured</span>
+                        </div>
+                        <div class="bg-blue-100 px-4 py-2 rounded-full">
+                            <span class="text-blue-800 font-semibold">Best Prices</span>
+                        </div>
+                        <div class="bg-green-100 px-4 py-2 rounded-full">
+                            <span class="text-green-800 font-semibold">Expert Advice</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <!-- Store Interior Illustration -->
+                    <div class="bg-gray-200 rounded-lg mb-6 h-64 flex items-center justify-center">
+                        <svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Store Background -->
+                            <rect width="300" height="200" fill="#E6F3FF"/>
+                            <!-- Floor -->
+                            <rect y="150" width="300" height="50" fill="#D2B48C"/>
+                            <!-- Back Wall -->
+                            <rect width="300" height="150" fill="#F0F8FF"/>
+                            <!-- Shelves -->
+                            <rect x="20" y="40" width="80" height="100" fill="#8B4513" rx="5"/>
+                            <rect x="120" y="40" width="80" height="100" fill="#8B4513" rx="5"/>
+                            <rect x="220" y="40" width="60" height="100" fill="#8B4513" rx="5"/>
+                            <!-- Shelf Items -->
+                            <rect x="25" y="45" width="15" height="20" fill="#FF6B6B" rx="2"/>
+                            <rect x="45" y="45" width="15" height="20" fill="#4ECDC4" rx="2"/>
+                            <rect x="65" y="45" width="15" height="20" fill="#45B7D1" rx="2"/>
+                            <rect x="25" y="75" width="15" height="20" fill="#96CEB4" rx="2"/>
+                            <rect x="45" y="75" width="15" height="20" fill="#FFEAA7" rx="2"/>
+                            <rect x="65" y="75" width="15" height="20" fill="#DDA0DD" rx="2"/>
+                            <!-- Counter -->
+                            <rect x="50" y="120" width="200" height="30" fill="#654321" rx="5"/>
+                            <!-- Cash Register -->
+                            <rect x="180" y="110" width="40" height="20" fill="#2F4F4F" rx="3"/>
+                            <!-- Tools Display -->
+                            <circle cx="140" cy="90" r="8" fill="#C0C0C0"/>
+                            <rect x="136" y="82" width="8" height="16" fill="#8B4513"/>
+                            <!-- Pipes -->
+                            <rect x="225" y="50" width="5" height="40" fill="#C0C0C0"/>
+                            <rect x="235" y="50" width="5" height="40" fill="#C0C0C0"/>
+                            <rect x="245" y="50" width="5" height="40" fill="#C0C0C0"/>
+                            <!-- Ceiling Light -->
+                            <ellipse cx="150" cy="20" rx="30" ry="10" fill="#FFFF99"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Mission</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Quality Products</h4>
+                                    <p class="text-gray-600">Providing only the highest quality building materials and hardware</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Customer Satisfaction</h4>
+                                    <p class="text-gray-600">Ensuring every customer leaves satisfied with their purchase and service</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Community Growth</h4>
+                                    <p class="text-gray-600">Contributing to the development and growth of our local community</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-boxes mr-3"></i>Our Extensive Product Range
+                </h2>
+                <p class="text-xl text-gray-600">Everything you need for your construction project under one roof</p>
+            </div>
+            
+            <!-- Photo Spaces: Product Showcase -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+                    <svg width="250" height="150" viewBox="0 0 250 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Sky -->
+                        <rect width="250" height="100" fill="#87CEEB"/>
+                        <!-- Ground -->
+                        <rect y="100" width="250" height="50" fill="#8FBC8F"/>
+                        <!-- Building Structure -->
+                        <rect x="50" y="60" width="80" height="40" fill="#D2B48C" stroke="#8B4513" stroke-width="2"/>
+                        <rect x="140" y="60" width="80" height="40" fill="#D2B48C" stroke="#8B4513" stroke-width="2"/>
+                        <!-- Roof -->
+                        <polygon points="45,60 90,30 135,60" fill="#8B4513"/>
+                        <polygon points="135,60 180,30 225,60" fill="#8B4513"/>
+                        <!-- Windows -->
+                        <rect x="60" y="70" width="15" height="15" fill="#87CEEB" stroke="#000" stroke-width="1"/>
+                        <rect x="105" y="70" width="15" height="15" fill="#87CEEB" stroke="#000" stroke-width="1"/>
+                        <rect x="150" y="70" width="15" height="15" fill="#87CEEB" stroke="#000" stroke-width="1"/>
+                        <rect x="195" y="70" width="15" height="15" fill="#87CEEB" stroke="#000" stroke-1"/>
+                        <!-- Construction Materials -->
+                        <rect x="20" y="90" width="20" height="10" fill="#8B4513"/>
+                        <rect x="25" y="85" width="10" height="5" fill="#C0C0C0"/>
+                        <!-- Cement Bags -->
+                        <rect x="200" y="85" width="15" height="15" fill="#696969"/>
+                        <rect x="220" y="85" width="15" height="15" fill="#696969"/>
+                        <!-- Tools -->
+                        <line x1="10" y1="95" x2="15" y2="105" stroke="#8B4513" stroke-width="2"/>
+                        <circle cx="12" cy="92" r="3" fill="#C0C0C0"/>
+                    </svg>
+                </div>
+                <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+                    <svg width="250" height="150" viewBox="0 0 250 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <rect width="250" height="150" fill="#F5F5DC"/>
+                        <!-- Display Shelves -->
+                        <rect x="20" y="30" width="200" height="15" fill="#8B4513"/>
+                        <rect x="20" y="70" width="200" height="15" fill="#8B4513"/>
+                        <rect x="20" y="110" width="200" height="15" fill="#8B4513"/>
+                        <!-- Hardware Items Row 1 -->
+                        <rect x="30" y="20" width="8" height="8" fill="#C0C0C0"/>
+                        <rect x="45" y="20" width="8" height="8" fill="#FFD700"/>
+                        <rect x="60" y="20" width="8" height="8" fill="#C0C0C0"/>
+                        <rect x="75" y="20" width="8" height="8" fill="#8B4513"/>
+                        <rect x="90" y="20" width="8" height="8" fill="#FF6347"/>
+                        <!-- Hardware Items Row 2 -->
+                        <circle cx="35" cy="65" r="4" fill="#C0C0C0"/>
+                        <circle cx="50" cy="65" r="4" fill="#FFD700"/>
+                        <circle cx="65" cy="65" r="4" fill="#C0C0C0"/>
+                        <rect x="75" y="60" width="15" height="10" fill="#4169E1"/>
+                        <rect x="95" y="60" width="15" height="10" fill="#32CD32"/>
+                        <!-- Tools Row 3 -->
+                        <rect x="30" y="100" width="20" height="5" fill="#8B4513"/>
+                        <circle cx="32" cy="102" r="2" fill="#C0C0C0"/>
+                        <rect x="55" y="100" width="3" height="15" fill="#8B4513"/>
+                        <rect x="65" y="100" width="15" height="8" fill="#FF4500"/>
+                        <!-- Pipes -->
+                        <rect x="150" y="20" width="5" height="100" fill="#C0C0C0"/>
+                        <rect x="160" y="20" width="5" height="100" fill="#C0C0C0"/>
+                        <rect x="170" y="20" width="5" height="100" fill="#C0C0C0"/>
+                        <!-- Wire Coils -->
+                        <circle cx="190" cy="40" r="12" fill="#FF6347" stroke="#8B0000" stroke-width="2"/>
+                        <circle cx="210" cy="40" r="12" fill="#4169E1" stroke="#000080" stroke-width="2"/>
+                        <!-- Paint Cans -->
+                        <rect x="185" y="80" width="15" height="20" fill="#FF69B4" rx="2"/>
+                        <rect x="205" y="80" width="15" height="20" fill="#32CD32" rx="2"/>
+                    </svg>
+                </div>
+                <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+                    <svg width="250" height="150" viewBox="0 0 250 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <rect width="250" height="150" fill="#E6E6FA"/>
+                        <!-- Floor -->
+                        <rect y="120" width="250" height="30" fill="#708090"/>
+                        <!-- Warehouse Structure -->
+                        <rect x="20" y="40" width="210" height="80" fill="#F0F8FF" stroke="#4682B4" stroke-width="2"/>
+                        <!-- Roof -->
+                        <polygon points="15,40 125,15 235,40" fill="#2F4F4F"/>
+                        <!-- Storage Racks -->
+                        <rect x="30" y="60" width="40" height="50" fill="#8B4513"/>
+                        <rect x="80" y="60" width="40" height="50" fill="#8B4513"/>
+                        <rect x="130" y="60" width="40" height="50" fill="#8B4513"/>
+                        <rect x="180" y="60" width="40" height="50" fill="#8B4513"/>
+                        <!-- Stored Materials -->
+                        <rect x="35" y="65" width="30" height="15" fill="#D2691E"/>
+                        <rect x="35" y="85" width="30" height="15" fill="#CD853F"/>
+                        <rect x="85" y="65" width="30" height="15" fill="#696969"/>
+                        <rect x="85" y="85" width="30" height="15" fill="#A9A9A9"/>
+                        <rect x="135" y="65" width="30" height="15" fill="#FF6347"/>
+                        <rect x="135" y="85" width="30" height="15" fill="#FF4500"/>
+                        <rect x="185" y="65" width="30" height="15" fill="#4169E1"/>
+                        <rect x="185" y="85" width="30" height="15" fill="#0000CD"/>
+                        <!-- Forklift -->
+                        <rect x="60" y="100" width="25" height="15" fill="#FFD700"/>
+                        <circle cx="65" cy="115" r="4" fill="#2F4F4F"/>
+                        <circle cx="80" cy="115" r="4" fill="#2F4F4F"/>
+                        <rect x="85" y="95" width="3" height="20" fill="#C0C0C0"/>
+                        <!-- Ceiling Lights -->
+                        <rect x="70" y="25" width="20" height="5" fill="#FFFF99"/>
+                        <rect x="160" y="25" width="20" height="5" fill="#FFFF99"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Hardware Items -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-hammer text-4xl text-gray-600 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Hardware Essentials</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Premium Quality Nails</li>
+                            <li>• Stainless Steel Screws</li>
+                            <li>• Electrical & Binding Wire</li>
+                            <li>• Bolts & Nuts</li>
+                            <li>• Hinges & Locks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Plumbing -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-wrench text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Plumbing Solutions</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• PVC & CPVC Pipes</li>
+                            <li>• Pipe Fittings & Joints</li>
+                            <li>• Water Taps & Valves</li>
+                            <li>• Bathroom Accessories</li>
+                            <li>• Drainage Solutions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Electrical -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-bolt text-4xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Electrical Components</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Electrical Wires & Cables</li>
+                            <li>• Switches & Sockets</li>
+                            <li>• Circuit Breakers</li>
+                            <li>• LED Lights & Bulbs</li>
+                            <li>• Electrical Panels</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Paints & Brushes -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-paint-brush text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Paints & Finishes</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Interior & Exterior Paints</li>
+                            <li>• Premium Paint Brushes</li>
+                            <li>• Paint Thinners & Solvents</li>
+                            <li>• Primers & Undercoats</li>
+                            <li>• Spray Paints</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Construction Materials -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-building text-4xl text-gray-700 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Construction Materials</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• High-Grade Cement</li>
+                            <li>• River Sand & M-Sand</li>
+                            <li>• Gravel & Aggregates</li>
+                            <li>• TMT Steel Bars</li>
+                            <li>• Bricks & Blocks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tiles -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-th-large text-4xl text-indigo-600 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Flooring & Tiles</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Ceramic & Vitrified Tiles</li>
+                            <li>• Marble & Granite</li>
+                            <li>• Tile Adhesives</li>
+                            <li>• Grout & Sealers</li>
+                            <li>• Floor Cleaning Chemicals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cleaning Supplies -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-broom text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Cleaning & Maintenance</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Professional Mops</li>
+                            <li>• Floor Cleaning Chemicals</li>
+                            <li>• Disinfectants</li>
+                            <li>• Cleaning Tools</li>
+                            <li>• Maintenance Equipment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Miscellaneous -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center">
+                        <i class="fas fa-toolbox text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Specialty Items</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Ropes (Various Diameters)</li>
+                            <li>• Chapakal Essentials</li>
+                            <li>• Safety Equipment</li>
+                            <li>• Hand Tools</li>
+                            <li>• Measuring Instruments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 gradient-bg-2 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-xl opacity-90">Beyond products, we offer comprehensive construction support</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
+                    <i class="fas fa-handshake text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Trusted Partnership</h3>
+                    <p class="opacity-90">Building long-term relationships with our customers through reliable service and consistent quality products.</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
+                    <i class="fas fa-calculator text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Material Estimation</h3>
+                    <p class="opacity-90">Our experts help you calculate the exact quantity of materials needed for your project, preventing waste and saving money.</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
+                    <i class="fas fa-users text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Expert Consultation</h3>
+                    <p class="opacity-90">Get professional advice on material selection, construction techniques, and cost-effective solutions from our experienced team.</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
+                    <i class="fas fa-credit-card text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Flexible Payment</h3>
+                    <p class="opacity-90">We offer flexible payment options including cash, digital payments, and credit facilities for regular customers.</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
+                    <i class="fas fa-shield-alt text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Quality Guarantee</h3>
+                    <p class="opacity-90">All our products come with quality assurance and we stand behind every item we sell with our reputation.</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
+                    <i class="fas fa-clock text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Quick Service</h3>
+                    <p class="opacity-90">Fast order processing and quick delivery ensure your construction work never gets delayed due to material shortage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Jay Maa Durga Traders?</h2>
+                <p class="text-xl text-gray-600">What makes us the preferred choice in Saharsa</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-medal text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">15+ Years Experience</h3>
+                    <p class="text-gray-600">Over a decade of serving the construction industry with dedication and expertise.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-star text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Premium Quality</h3>
+                    <p class="text-gray-600">We source only the finest materials from trusted manufacturers and suppliers.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rupee-sign text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Best Prices</h3>
+                    <p class="text-gray-600">Competitive pricing without compromising on quality. Best value for your money.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-3xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Trusted Service</h3>
+                    <p class="text-gray-600">Thousands of satisfied customers trust us for their construction needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 gradient-bg-3 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">What Our Customers Say</h2>
+                <p class="text-xl opacity-90">Real feedback from real customers</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Rajesh Kumar</h4>
+                            <p class="opacity-75">Contractor</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90 mb-4">"Jay Maa Durga Traders has been my go-to supplier for over 8 years. Their quality is consistent and delivery is always on time. Highly recommended!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Priya Sharma</h4>
+                            <p class="opacity-75">Homeowner</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90 mb-4">"Built my dream home with materials from here. Pankaj ji provided excellent guidance and the prices were very reasonable. Great service!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Amit Singh</h4>
+                            <p class="opacity-75">Builder</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90 mb-4">"The best hardware shop in Saharsa! They have everything under one roof and the staff is very knowledgeable. Never disappointed!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Hours Section -->
+    <section id="location" class="bg-white py-16 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Visit Our Store</h2>
+                <p class="text-xl text-gray-600">Conveniently located in the heart of Saharsa</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>Our Location
+                    </h3>
+                    <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                        <p class="text-gray-700 text-lg mb-4">
+                            <strong>Jay Maa Durga Traders</strong><br>
+                            Near Atalkha Chowk<br>
+                            Atalkha-Patarghat Road<br>
+                            Saharsa, Bihar
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://maps.app.goo.gl/3eJmCfeieoJKL42AA" 
+                               target="_blank" 
+                               class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
+                                <i class="fas fa-directions mr-2"></i>Get Directions
+                            </a>
+                            <a href="tel:6202804476" 
+                               class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors text-center">
+                                <i class="fas fa-phone mr-2"></i>Call for Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-clock text-green-500 mr-2"></i>Opening Hours
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-orange-100 p-4 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fas fa-sun text-orange-600 mr-3 text-xl"></i>
+                                    <span class="font-semibold text-orange-800">Summer Season</span>
+                                </div>
+                                <span class="font-bold text-orange-800">7:00 AM - 8:00 PM</span>
+                            </div>
+                            <p class="text-orange-700 text-sm mt-2">March to October</p>
+                        </div>
+                        
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fas fa-snowflake text-blue-600 mr-3 text-xl"></i>
+                                    <span class="font-semibold text-blue-800">Winter Season</span>
+                                </div>
+                                <span class="font-bold text-blue-800">8:00 AM - 8:00 PM</span>
+                            </div>
+                            <p class="text-blue-700 text-sm mt-2">November to February</p>
+                        </div>
+                        
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-info-circle text-gray-600 mr-3 text-xl"></i>
+                                <span class="text-gray-700">Open 7 days a week including holidays</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Build Your Dream Project?</h2>
+            <p class="text-xl mb-8 opacity-90">Contact us today for all your construction and hardware needs!</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-phone text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Call Us</h3>
+                    <div class="space-y-2">
+                        <a href="tel:6202804476" class="block hover:text-yellow-300 transition-colors text-lg">
+                            6202804476
+                        </a>
+                        <a href="tel:9934890059" class="block hover:text-yellow-300 transition-colors text-lg">
+                            9934890059
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-map-marker-alt text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Visit Us</h3>
+                    <p class="opacity-90">Near Atalkha Chowk<br>Saharsa, Bihar</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-user text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Owner</h3>
+                    <p class="opacity-90">Pankaj Kumar Gupta<br>15+ Years Experience</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="tel:6202804476" 
+                   class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors pulse-animation">
+                    <i class="fas fa-phone mr-2"></i>Call Now: 6202804476
+                </a>
+                <a href="https://maps.app.goo.gl/3eJmCfeieoJKL42AA" 
+                   target="_blank"
+                   class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                    <i class="fas fa-map-marker-alt mr-2"></i>Visit Our Store
+                </a>
+                <a href="#products" 
+                   class="bg-yellow-500 text-gray-800 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors">
+                    <i class="fas fa-shopping-cart mr-2"></i>View Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Jay Maa Durga Traders</h3>
+                    <p class="text-gray-300 mb-4">Your trusted partner for all building and construction needs in Saharsa, Bihar since 2009.</p>
+                    <div class="flex space-x-4">
+                        <a href="tel:6202804476" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <a href="#home" class="block hover:text-white transition-colors">Home</a>
+                        <a href="#about" class="block hover:text-white transition-colors">About Us</a>
+                        <a href="#products" class="block hover:text-white transition-colors">Products</a>
+                        <a href="#services" class="block hover:text-white transition-colors">Services</a>
+                        <a href="#contact" class="block hover:text-white transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <div class="space-y-3 text-gray-300">
+                        <p><i class="fas fa-user mr-2"></i>Pankaj Kumar Gupta</p>
+                        <p><i class="fas fa-phone mr-2"></i>6202804476 / 9934890059</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Near Atalkha Chowk, Saharsa, Bihar</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@jaymaaduragtraders.com</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Business Hours</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-sun mr-2"></i>Summer: 7:00 AM - 8:00 PM</p>
+                        <p><i class="fas fa-snowflake mr-2"></i>Winter: 8:00 AM - 8:00 PM</p>
+                        <p><i class="fas fa-calendar mr-2"></i>Open 7 Days a Week</p>
+                        <p class="text-green-400 font-semibold mt-4">
+                            <i class="fas fa-star mr-2"></i>Quality Guaranteed Products
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        &copy; 2024 Jay Maa Durga Traders. All rights reserved.
+                    </p>
+                    <p class="text-gray-400">
+                        Serving Saharsa & surrounding areas since 2009
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Add smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu after clicking a link
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Add click tracking for phone numbers
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Phone number clicked:', this.href);
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97004f3e857b0d14',t:'MTc1NTM0MDc4NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
