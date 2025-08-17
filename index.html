@@ -7,47 +7,278 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
+        
         .gradient-bg-2 {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
+        
         .gradient-bg-3 {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
-        .card-hover:hover {
+        
+        .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
-        .pulse-animation {
-            animation: pulse 2s infinite;
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+        
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
+        
+        .nav-bar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .stats-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .owner-pic {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+        }
+        
         .fade-in {
-            animation: fadeIn 0.8s ease-in;
+            animation: fadeIn 0.6s ease-in;
         }
+        
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { 
+                opacity: 0; 
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
         }
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .animated-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(-45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05), rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            z-index: 1;
+        }
+        
+        .animated-bg > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: floatParticle 20s infinite linear;
+        }
+        
+        .particle:nth-child(1) {
+            width: 4px;
+            height: 4px;
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 25s;
+        }
+        
+        .particle:nth-child(2) {
+            width: 6px;
+            height: 6px;
+            left: 20%;
+            animation-delay: 2s;
+            animation-duration: 30s;
+        }
+        
+        .particle:nth-child(3) {
+            width: 3px;
+            height: 3px;
+            left: 30%;
+            animation-delay: 4s;
+            animation-duration: 22s;
+        }
+        
+        .particle:nth-child(4) {
+            width: 5px;
+            height: 5px;
+            left: 40%;
+            animation-delay: 6s;
+            animation-duration: 28s;
+        }
+        
+        .particle:nth-child(5) {
+            width: 4px;
+            height: 4px;
+            left: 50%;
+            animation-delay: 8s;
+            animation-duration: 26s;
+        }
+        
+        .particle:nth-child(6) {
+            width: 7px;
+            height: 7px;
+            left: 60%;
+            animation-delay: 10s;
+            animation-duration: 24s;
+        }
+        
+        .particle:nth-child(7) {
+            width: 3px;
+            height: 3px;
+            left: 70%;
+            animation-delay: 12s;
+            animation-duration: 32s;
+        }
+        
+        .particle:nth-child(8) {
+            width: 5px;
+            height: 5px;
+            left: 80%;
+            animation-delay: 14s;
+            animation-duration: 27s;
+        }
+        
+        .particle:nth-child(9) {
+            width: 4px;
+            height: 4px;
+            left: 90%;
+            animation-delay: 16s;
+            animation-duration: 29s;
+        }
+        
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .wave-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wave-bg::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 100px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.1) 100%);
+            animation: wave 10s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        @keyframes wave {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0px);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+        }
+        
+        .pulse-bg {
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                background-size: 100% 100%;
+            }
+            50% {
+                background-size: 110% 110%;
+            }
         }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="nav-bar sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
@@ -88,7 +319,18 @@
     </nav>
 
     <!-- Header -->
-    <header id="home" class="gradient-bg text-white shadow-lg">
+    <header id="home" class="gradient-bg animated-bg text-white shadow-lg">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
         <div class="container mx-auto px-4 py-12">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="text-center md:text-left mb-8 md:mb-0 fade-in">
@@ -97,29 +339,42 @@
                     </h1>
                     <p class="text-xl md:text-2xl opacity-90 mb-6">All essentials used in building a house are available in one place</p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#products" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <a href="#products" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold">
                             <i class="fas fa-shopping-cart mr-2"></i>View Products
                         </a>
-                        <a href="tel:6202804476" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                        <a href="tel:6202804476" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all">
                             <i class="fas fa-phone mr-2"></i>Call Now
                         </a>
                     </div>
                 </div>
                 <div class="text-center md:text-right">
-                    <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
-                        <div class="mb-4">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-lg bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">
-                                <span class="text-white font-bold text-sm text-center">Owner<br>Pic</span>
+                    <div class="card p-6">
+                        <div class="flex items-center justify-center md:justify-end mb-4">
+                            <div class="w-20 h-20 rounded-full border-4 border-white shadow-lg owner-pic flex items-center justify-center floating mr-4">
+                                <span class="text-white font-bold text-xs text-center">Owner<br>Pic</span>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="font-bold text-xl text-gray-800 mb-2">Pankaj Kumar Gupta</h3>
+                                <p class="text-gray-600 text-sm mb-1">Owner & Proprietor</p>
+                                <p class="text-gray-600 text-sm">Jay Maa Durga Traders</p>
                             </div>
                         </div>
-                        <p class="font-semibold mb-3 text-lg">Owner: Pankaj Kumar Gupta</p>
-                        <div class="flex flex-col space-y-2">
-                            <a href="tel:6202804476" class="hover:text-yellow-300 transition-colors text-lg">
-                                <i class="fas fa-phone mr-2"></i>6202804476
-                            </a>
-                            <a href="tel:9934890059" class="hover:text-yellow-300 transition-colors text-lg">
-                                <i class="fas fa-phone mr-2"></i>9934890059
-                            </a>
+                        <div class="border-t pt-4">
+                            <h4 class="font-semibold text-gray-800 mb-3">Contact Information</h4>
+                            <div class="flex flex-col space-y-2">
+                                <a href="tel:6202804476" class="hover:text-yellow-300 transition-colors text-lg flex items-center justify-center md:justify-end">
+                                    <i class="fas fa-phone mr-2"></i>6202804476
+                                </a>
+                                <a href="tel:9934890059" class="hover:text-yellow-300 transition-colors text-lg flex items-center justify-center md:justify-end">
+                                    <i class="fas fa-phone mr-2"></i>9934890059
+                                </a>
+                                <a href="https://wa.me/916202804476" class="hover:text-yellow-300 transition-colors text-base flex items-center justify-center md:justify-end">
+                                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp: 6202804476
+                                </a>
+                                <a href="https://wa.me/919934890059" class="hover:text-yellow-300 transition-colors text-base flex items-center justify-center md:justify-end">
+                                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp: 9934890059
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,19 +386,19 @@
     <section class="bg-white py-12 shadow-sm">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="fade-in">
+                <div class="stats-card p-6 fade-in">
                     <div class="text-4xl font-bold text-purple-600 mb-2">6+</div>
                     <div class="text-gray-600">Years Experience</div>
                 </div>
-                <div class="fade-in">
+                <div class="stats-card p-6 fade-in">
                     <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
                     <div class="text-gray-600">Products Available</div>
                 </div>
-                <div class="fade-in">
+                <div class="stats-card p-6 fade-in">
                     <div class="text-4xl font-bold text-green-600 mb-2">1000+</div>
                     <div class="text-gray-600">Happy Customers</div>
                 </div>
-                <div class="fade-in">
+                <div class="stats-card p-6 fade-in">
                     <div class="text-4xl font-bold text-red-600 mb-2">24/7</div>
                     <div class="text-gray-600">Customer Support</div>
                 </div>
@@ -172,20 +427,20 @@
                         Our commitment to quality, competitive pricing, and exceptional customer service has made us the preferred choice for contractors, builders, and homeowners throughout the region.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <div class="bg-purple-100 px-4 py-2 rounded-full">
-                            <span class="text-purple-800 font-semibold">Quality Assured</span>
+                        <div class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-semibold">
+                            Quality Assured
                         </div>
-                        <div class="bg-blue-100 px-4 py-2 rounded-full">
-                            <span class="text-blue-800 font-semibold">Best Prices</span>
+                        <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
+                            Best Prices
                         </div>
-                        <div class="bg-green-100 px-4 py-2 rounded-full">
-                            <span class="text-green-800 font-semibold">Expert Advice</span>
+                        <div class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold">
+                            Expert Advice
                         </div>
                     </div>
                 </div>
                 <div class="fade-in">
                     <!-- Store Interior Illustration -->
-                    <div class="bg-gray-200 rounded-lg mb-6 h-64 flex items-center justify-center">
+                    <div class="card mb-6 h-64 flex items-center justify-center floating">
                         <svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <!-- Store Background -->
                             <rect width="300" height="200" fill="#E6F3FF"/>
@@ -220,7 +475,7 @@
                         </svg>
                     </div>
                     
-                    <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="card p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Mission</h3>
                         <div class="space-y-4">
                             <div class="flex items-start">
@@ -263,7 +518,7 @@
             
             <!-- Photo Spaces: Product Showcase -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+                <div class="card h-48 flex items-center justify-center floating">
                     <svg width="250" height="150" viewBox="0 0 250 150" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <!-- Sky -->
                         <rect width="250" height="100" fill="#87CEEB"/>
@@ -279,7 +534,7 @@
                         <rect x="60" y="70" width="15" height="15" fill="#87CEEB" stroke="#000" stroke-width="1"/>
                         <rect x="105" y="70" width="15" height="15" fill="#87CEEB" stroke="#000" stroke-width="1"/>
                         <rect x="150" y="70" width="15" height="15" fill="#87CEEB" stroke="#000" stroke-width="1"/>
-                        <rect x="195" y="70" width="15" height="15" fill="#87CEEB" stroke="#000" stroke-1"/>
+                        <rect x="195" y="70" width="15" height="15" fill="#87CEEB" stroke="#000" stroke-width="1"/>
                         <!-- Construction Materials -->
                         <rect x="20" y="90" width="20" height="10" fill="#8B4513"/>
                         <rect x="25" y="85" width="10" height="5" fill="#C0C0C0"/>
@@ -291,7 +546,7 @@
                         <circle cx="12" cy="92" r="3" fill="#C0C0C0"/>
                     </svg>
                 </div>
-                <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+                <div class="card h-48 flex items-center justify-center floating">
                     <svg width="250" height="150" viewBox="0 0 250 150" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <!-- Background -->
                         <rect width="250" height="150" fill="#F5F5DC"/>
@@ -328,7 +583,7 @@
                         <rect x="205" y="80" width="15" height="20" fill="#32CD32" rx="2"/>
                     </svg>
                 </div>
-                <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+                <div class="card h-48 flex items-center justify-center floating">
                     <svg width="250" height="150" viewBox="0 0 250 150" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <!-- Background -->
                         <rect width="250" height="150" fill="#E6E6FA"/>
@@ -366,7 +621,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <!-- Hardware Items -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                <div class="product-card p-6">
                     <div class="text-center">
                         <i class="fas fa-hammer text-4xl text-gray-600 mb-4"></i>
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Hardware Essentials</h3>
@@ -381,7 +636,7 @@
                 </div>
 
                 <!-- Plumbing -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                <div class="product-card p-6">
                     <div class="text-center">
                         <i class="fas fa-wrench text-4xl text-blue-600 mb-4"></i>
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Plumbing Solutions</h3>
@@ -395,10 +650,8 @@
                     </div>
                 </div>
 
-
-
                 <!-- Paints & Brushes -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                <div class="product-card p-6">
                     <div class="text-center">
                         <i class="fas fa-paint-brush text-4xl text-purple-600 mb-4"></i>
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Paints & Finishes</h3>
@@ -413,7 +666,7 @@
                 </div>
 
                 <!-- Construction Materials -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                <div class="product-card p-6">
                     <div class="text-center">
                         <i class="fas fa-building text-4xl text-gray-700 mb-4"></i>
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Construction Materials</h3>
@@ -427,7 +680,7 @@
                 </div>
 
                 <!-- Tiles -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                <div class="product-card p-6">
                     <div class="text-center">
                         <i class="fas fa-th-large text-4xl text-indigo-600 mb-4"></i>
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Flooring & Tiles</h3>
@@ -441,8 +694,38 @@
                     </div>
                 </div>
 
+                <!-- Roofing Materials -->
+                <div class="product-card p-6">
+                    <div class="text-center">
+                        <i class="fas fa-home text-4xl text-orange-600 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Roofing Solutions</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Roof Top Panni (Sheets)</li>
+                            <li>• Roofing Accessories</li>
+                            <li>• Roof Insulation Materials</li>
+                            <li>• Roofing Hardware & Fasteners</li>
+                            <li>• Roof Repair Materials</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Waterproofing Materials -->
+                <div class="product-card p-6">
+                    <div class="text-center">
+                        <i class="fas fa-umbrella text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Waterproofing & Protection</h3>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Tripal (Heavy Duty Tarpaulin)</li>
+                            <li>• Household Panni (Water Resistant)</li>
+                            <li>• Waterproof Plastic Sheets</li>
+                            <li>• Weather Protection Covers</li>
+                            <li>• Waterproofing Compounds</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <!-- Cleaning Supplies -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                <div class="product-card p-6">
                     <div class="text-center">
                         <i class="fas fa-broom text-4xl text-green-600 mb-4"></i>
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Cleaning & Maintenance</h3>
@@ -457,7 +740,7 @@
                 </div>
 
                 <!-- Miscellaneous -->
-                <div class="bg-gray-50 rounded-lg shadow-md p-6 card-hover">
+                <div class="product-card p-6">
                     <div class="text-center">
                         <i class="fas fa-toolbox text-4xl text-red-600 mb-4"></i>
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Specialty Items</h3>
@@ -475,7 +758,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 gradient-bg-2 text-white">
+    <section id="services" class="py-16 gradient-bg-2 wave-bg text-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold mb-4">Our Services</h2>
@@ -483,46 +766,44 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
-                    <i class="fas fa-handshake text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Trusted Partnership</h3>
-                    <p class="opacity-90">Building long-term relationships with our customers through reliable service and consistent quality products.</p>
+                <div class="card p-6">
+                    <i class="fas fa-handshake text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Trusted Partnership</h3>
+                    <p class="text-gray-600">Building long-term relationships with our customers through reliable service and consistent quality products.</p>
                 </div>
                 
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
-                    <i class="fas fa-calculator text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Material Estimation</h3>
-                    <p class="opacity-90">Our experts help you calculate the exact quantity of materials needed for your project, preventing waste and saving money.</p>
+                <div class="card p-6">
+                    <i class="fas fa-calculator text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Material Estimation</h3>
+                    <p class="text-gray-600">Our experts help you calculate the exact quantity of materials needed for your project, preventing waste and saving money.</p>
                 </div>
                 
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
-                    <i class="fas fa-users text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Expert Consultation</h3>
-                    <p class="opacity-90">Get professional advice on material selection, construction techniques, and cost-effective solutions from our experienced team.</p>
+                <div class="card p-6">
+                    <i class="fas fa-users text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Expert Consultation</h3>
+                    <p class="text-gray-600">Get professional advice on material selection, construction techniques, and cost-effective solutions from our experienced team.</p>
                 </div>
                 
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
-                    <i class="fas fa-credit-card text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Flexible Payment</h3>
-                    <p class="opacity-90">We offer flexible payment options including cash, digital payments, and credit facilities for regular customers.</p>
+                <div class="card p-6">
+                    <i class="fas fa-credit-card text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Flexible Payment</h3>
+                    <p class="text-gray-600">We offer flexible payment options including cash, digital payments, and credit facilities for regular customers.</p>
                 </div>
                 
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
-                    <i class="fas fa-shield-alt text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Quality Guarantee</h3>
-                    <p class="opacity-90">All our products come with quality assurance and we stand behind every item we sell with our reputation.</p>
+                <div class="card p-6">
+                    <i class="fas fa-shield-alt text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Quality Guarantee</h3>
+                    <p class="text-gray-600">All our products come with quality assurance and we stand behind every item we sell with our reputation.</p>
                 </div>
                 
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm card-hover">
-                    <i class="fas fa-clock text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Quick Service</h3>
-                    <p class="opacity-90">Fast order processing and quick delivery ensure your construction work never gets delayed due to material shortage.</p>
+                <div class="card p-6">
+                    <i class="fas fa-clock text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Quick Service</h3>
+                    <p class="text-gray-600">Fast order processing and quick delivery ensure your construction work never gets delayed due to material shortage.</p>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <!-- Why Choose Us Section -->
     <section class="py-16 bg-white">
@@ -534,7 +815,7 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="stats-card w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                         <i class="fas fa-medal text-3xl text-purple-600"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">6+ Years Experience</h3>
@@ -542,7 +823,7 @@
                 </div>
                 
                 <div class="text-center">
-                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="stats-card w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                         <i class="fas fa-star text-3xl text-blue-600"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Premium Quality</h3>
@@ -550,7 +831,7 @@
                 </div>
                 
                 <div class="text-center">
-                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="stats-card w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                         <i class="fas fa-rupee-sign text-3xl text-green-600"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Best Prices</h3>
@@ -558,7 +839,7 @@
                 </div>
                 
                 <div class="text-center">
-                    <div class="bg-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="stats-card w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                         <i class="fas fa-handshake text-3xl text-red-600"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Trusted Service</h3>
@@ -569,7 +850,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 gradient-bg-3 text-white">
+    <section id="testimonials" class="py-16 gradient-bg-3 pulse-bg text-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold mb-4">What Our Customers Say</h2>
@@ -577,17 +858,17 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                <div class="card p-6">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-xl"></i>
+                        <div class="w-12 h-12 owner-pic rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl text-white"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold">Rajesh Kumar</h4>
-                            <p class="opacity-75">Contractor</p>
+                            <h4 class="font-bold text-gray-800">Rajesh Kumar</h4>
+                            <p class="text-gray-600">Contractor</p>
                         </div>
                     </div>
-                    <p class="opacity-90 mb-4">"Jay Maa Durga Traders has been my go-to supplier for over 6 years. Their quality is consistent and delivery is always on time. They're open all day which makes it very convenient for contractors like me. Highly recommended!"</p>
+                    <p class="text-gray-700 mb-4">"Jay Maa Durga Traders has been my go-to supplier for over 6 years. Their quality is consistent and delivery is always on time. They're open all day which makes it very convenient for contractors like me. Highly recommended!"</p>
                     <div class="flex text-yellow-400">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -597,17 +878,17 @@
                     </div>
                 </div>
                 
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                <div class="card p-6">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-xl"></i>
+                        <div class="w-12 h-12 owner-pic rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl text-white"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold">Priya Sharma</h4>
-                            <p class="opacity-75">Homeowner</p>
+                            <h4 class="font-bold text-gray-800">Priya Sharma</h4>
+                            <p class="text-gray-600">Homeowner</p>
                         </div>
                     </div>
-                    <p class="opacity-90 mb-4">"Built my dream home with materials from here. Pankaj ji provided excellent guidance and the prices were very reasonable. Great service!"</p>
+                    <p class="text-gray-700 mb-4">"Built my dream home with materials from here. Pankaj ji provided excellent guidance and the prices were very reasonable. Great service!"</p>
                     <div class="flex text-yellow-400">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -617,17 +898,17 @@
                     </div>
                 </div>
                 
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                <div class="card p-6">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-xl"></i>
+                        <div class="w-12 h-12 owner-pic rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl text-white"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold">Amit Singh</h4>
-                            <p class="opacity-75">Builder</p>
+                            <h4 class="font-bold text-gray-800">Amit Singh</h4>
+                            <p class="text-gray-600">Builder</p>
                         </div>
                     </div>
-                    <p class="opacity-90 mb-4">"The best hardware shop in Saharsa! They have everything under one roof and the staff is very knowledgeable. Never disappointed!"</p>
+                    <p class="text-gray-700 mb-4">"The best hardware shop in Saharsa! They have everything under one roof and the staff is very knowledgeable. Never disappointed!"</p>
                     <div class="flex text-yellow-400">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -653,7 +934,7 @@
                     <h3 class="text-2xl font-bold text-gray-800 mb-6">
                         <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>Our Location
                     </h3>
-                    <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                    <div class="card p-6 mb-6">
                         <p class="text-gray-700 text-lg mb-4">
                             <strong>Jay Maa Durga Traders</strong><br>
                             Near Atalkha Chowk<br>
@@ -663,11 +944,11 @@
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="https://maps.app.goo.gl/3eJmCfeieoJKL42AA" 
                                target="_blank" 
-                               class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
+                               class="btn-primary text-white px-6 py-3 rounded-lg text-center">
                                 <i class="fas fa-directions mr-2"></i>Get Directions
                             </a>
                             <a href="tel:6202804476" 
-                               class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors text-center">
+                               class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-center transition-colors">
                                 <i class="fas fa-phone mr-2"></i>Call for Directions
                             </a>
                         </div>
@@ -679,7 +960,7 @@
                         <i class="fas fa-clock text-green-500 mr-2"></i>Opening Hours
                     </h3>
                     <div class="space-y-4">
-                        <div class="bg-orange-100 p-4 rounded-lg">
+                        <div class="card p-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
                                     <i class="fas fa-sun text-orange-600 mr-3 text-xl"></i>
@@ -690,7 +971,7 @@
                             <p class="text-orange-700 text-sm mt-2">March to October</p>
                         </div>
                         
-                        <div class="bg-blue-100 p-4 rounded-lg">
+                        <div class="card p-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
                                     <i class="fas fa-snowflake text-blue-600 mr-3 text-xl"></i>
@@ -701,7 +982,7 @@
                             <p class="text-blue-700 text-sm mt-2">November to February</p>
                         </div>
                         
-                        <div class="bg-gray-100 p-4 rounded-lg">
+                        <div class="card p-4">
                             <div class="flex items-center">
                                 <i class="fas fa-info-circle text-gray-600 mr-3 text-xl"></i>
                                 <span class="text-gray-700">Open 7 days a week including holidays</span>
@@ -714,51 +995,54 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="gradient-bg text-white py-16">
+    <section id="contact" class="gradient-bg animated-bg text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold mb-6">Ready to Build Your Dream Project?</h2>
             <p class="text-xl mb-8 opacity-90">Contact us today for all your construction and hardware needs!</p>
             
             <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
-                    <i class="fas fa-phone text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Call Us</h3>
+                <div class="card p-6">
+                    <i class="fas fa-phone text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Call Us</h3>
                     <div class="space-y-2">
-                        <a href="tel:6202804476" class="block hover:text-yellow-300 transition-colors text-lg">
+                        <a href="tel:6202804476" class="block text-gray-700 hover:text-purple-600 transition-colors text-lg">
                             6202804476
                         </a>
-                        <a href="tel:9934890059" class="block hover:text-yellow-300 transition-colors text-lg">
+                        <a href="tel:9934890059" class="block text-gray-700 hover:text-purple-600 transition-colors text-lg">
                             9934890059
                         </a>
                     </div>
                 </div>
                 
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
-                    <i class="fas fa-map-marker-alt text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Visit Us</h3>
-                    <p class="opacity-90">Near Atalkha Chowk<br>Saharsa, Bihar</p>
+                <div class="card p-6">
+                    <i class="fas fa-map-marker-alt text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Visit Us</h3>
+                    <p class="text-gray-700">Near Atalkha Chowk<br>Saharsa, Bihar</p>
                 </div>
                 
-                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
-                    <i class="fas fa-user text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Owner</h3>
-                    <p class="opacity-90">Pankaj Kumar Gupta<br>6+ Years Experience</p>
+                <div class="card p-6">
+                    <i class="fab fa-whatsapp text-4xl mb-4 text-purple-600"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">WhatsApp</h3>
+                    <a href="https://wa.me/916202804476" class="text-gray-700 hover:text-purple-600 transition-colors">
+                        +91 6202804476
+                    </a>
                 </div>
             </div>
             
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
                 <a href="tel:6202804476" 
-                   class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors pulse-animation">
+                   class="btn-primary text-white px-8 py-4 rounded-lg font-semibold">
                     <i class="fas fa-phone mr-2"></i>Call Now: 6202804476
                 </a>
                 <a href="https://maps.app.goo.gl/3eJmCfeieoJKL42AA" 
                    target="_blank"
-                   class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                   class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all">
                     <i class="fas fa-map-marker-alt mr-2"></i>Visit Our Store
                 </a>
-                <a href="#products" 
-                   class="bg-yellow-500 text-gray-800 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors">
-                    <i class="fas fa-shopping-cart mr-2"></i>View Products
+                <a href="https://wa.me/916202804476" 
+                   target="_blank"
+                   class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp Us
                 </a>
             </div>
         </div>
@@ -772,7 +1056,7 @@
                     <h3 class="text-2xl font-bold mb-4">Jay Maa Durga Traders</h3>
                     <p class="text-gray-300 mb-4">Your trusted partner for all building and construction needs in Saharsa, Bihar since 2020.</p>
                     <div class="flex space-x-4">
-                        <a href="tel:6202804476" class="text-gray-300 hover:text-white transition-colors">
+                        <a href="https://wa.me/916202804476" class="text-gray-300 hover:text-white transition-colors">
                             <i class="fab fa-whatsapp text-2xl"></i>
                         </a>
                         <a href="#" class="text-gray-300 hover:text-white transition-colors">
@@ -801,7 +1085,7 @@
                         <p><i class="fas fa-user mr-2"></i>Pankaj Kumar Gupta</p>
                         <p><i class="fas fa-phone mr-2"></i>6202804476 / 9934890059</p>
                         <p><i class="fas fa-map-marker-alt mr-2"></i>Near Atalkha Chowk, Saharsa, Bihar</p>
-                        <p><i class="fas fa-envelope mr-2"></i>info@jaymaaduragtraders.com</p>
+                        <p><i class="fab fa-whatsapp mr-2"></i>WhatsApp: +91 6202804476</p>
                     </div>
                 </div>
                 
@@ -882,5 +1166,5 @@
             observer.observe(el);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97026ee1d10d5a0b',t:'MTc1NTM2MzA1Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9706c05e33a45505',t:'MTc1NTQwODMzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
